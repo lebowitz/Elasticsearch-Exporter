@@ -241,9 +241,7 @@ exports.readOptionsFile = function(opts) {
     }
     var fileOpts = JSON.parse(fs.readFileSync(opts.optionsFile));
     for (var prop in fileOpts) {
-        if (!opts[prop]) {
             opts[prop] = fileOpts[prop];
-        }
     }
 };
 
